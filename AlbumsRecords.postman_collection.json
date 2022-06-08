@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "f0f68622-ce9a-4ad4-8dbc-92f35a369bb2",
+		"name": "AlbumsRecords",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Token Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "shibdas@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "admin@123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/auth/token",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"shibdas\",\n    \"email\":\"shisdddsasdsdad@gmail.com\",\n    \"phone\":\"9093934151\",\n    \"password\":\"12345678\",\n    \"password2\":\"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/auth/signup",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Album",
+			"item": [
+				{
+					"name": "get-several-albums",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU0NjMxNTk1LCJpYXQiOjE2NTQ2MzEyOTUsImp0aSI6IjVkZDYyYzVhNjk2YTQ5YTNhMDBmNWVhZTFiODNlOTk2IiwidXNlcl9pZCI6MX0.umPJYvO3_3LJS9brEvxvDJb3Tg_PtFBVFWJSck13jZA",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/album/get-several-albums",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"album",
+								"get-several-albums"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single album",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU0NjMxNTk1LCJpYXQiOjE2NTQ2MzEyOTUsImp0aSI6IjVkZDYyYzVhNjk2YTQ5YTNhMDBmNWVhZTFiODNlOTk2IiwidXNlcl9pZCI6MX0.umPJYvO3_3LJS9brEvxvDJb3Tg_PtFBVFWJSck13jZA",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/album/get-album/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"album",
+								"get-album",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-albums-track",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU0NjMxNTk1LCJpYXQiOjE2NTQ2MzEyOTUsImp0aSI6IjVkZDYyYzVhNjk2YTQ5YTNhMDBmNWVhZTFiODNlOTk2IiwidXNlcl9pZCI6MX0.umPJYvO3_3LJS9brEvxvDJb3Tg_PtFBVFWJSck13jZA",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/album/get-albums-track/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"album",
+								"get-albums-track",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Album",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU0NjMxNTk1LCJpYXQiOjE2NTQ2MzEyOTUsImp0aSI6IjVkZDYyYzVhNjk2YTQ5YTNhMDBmNWVhZTFiODNlOTk2IiwidXNlcl9pZCI6MX0.umPJYvO3_3LJS9brEvxvDJb3Tg_PtFBVFWJSck13jZA",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/album/get-album/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"album",
+								"get-album",
+								"2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-new-relese-album",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU0NjMxNTk1LCJpYXQiOjE2NTQ2MzEyOTUsImp0aSI6IjVkZDYyYzVhNjk2YTQ5YTNhMDBmNWVhZTFiODNlOTk2IiwidXNlcl9pZCI6MX0.umPJYvO3_3LJS9brEvxvDJb3Tg_PtFBVFWJSck13jZA",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/album/get-new-relese-album",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"album",
+								"get-new-relese-album"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
