@@ -6,8 +6,6 @@ python3 manage.py makemigrations
 
 python3 manage.py migrate
 
-python3 manage.py collectstatic --noinput
-
 sudo cp -rf gunicorn.service /etc/systemd/system/
 
 sudo systemctl daemon-reload
