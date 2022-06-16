@@ -4,7 +4,7 @@ then
 else
     python3 -m venv env
 fi
-
+echo "Script executed from: ${ls}"
 source env/bin/activate
 
 
