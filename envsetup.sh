@@ -4,9 +4,7 @@ then
 else
     python3 -m venv env
 fi
-echo "Script executed from: ${ls}"
-source env/bin/activate
-
+source /var/lib/jenkins/workspace/NewApp/env/bin/activate
 
 pip3 install -r requirements.txt
 
