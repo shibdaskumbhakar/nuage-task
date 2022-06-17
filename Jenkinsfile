@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh '''
                     chmod +x gunicorn.sh
-                    ./gunicorn.sh
+                    source ./gunicorn.sh
                     '''
             }
         }
