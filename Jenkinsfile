@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh '''
                     chmod +x envsetup.sh
-                    ./envsetup.sh
+                    source ./envsetup.sh
                     '''
             }
         }
@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh '''
                     chmod +x gunicorn.sh
-                    source ./gunicorn.sh
+                    ./gunicorn.sh
                     '''
             }
         }
